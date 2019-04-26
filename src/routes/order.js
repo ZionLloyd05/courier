@@ -1,13 +1,14 @@
-const middlewares = require('../middlewares')
+// const middlewares = require('../middlewares')
+const {
+    Router
+} = require('express')
 const route = Router()
 
 module.exports = (app) => {
     app.use('/orders', route)
 
     route.get('/', async (req, res) => {
-        return res.json({
-            user: req.currentUser
-        }).status(200);
+        return res.send('heyo')
     })
 
 }

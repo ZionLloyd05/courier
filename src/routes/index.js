@@ -1,7 +1,7 @@
 const {
     Router
 } = require('express')
-import auth from './routes/order'
+const order = require('./order')
 
 const app = Router()
 order(app)
