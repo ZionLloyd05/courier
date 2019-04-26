@@ -6,14 +6,14 @@ const dotenv = require("dotenv")
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
 const envFound = dotenv.config({
-    path: "variables.env"
+    path: ".env"
 })
 
 if (!envFound) {
     throw new Error('⚠️  Couldn\'t find .env file  ⚠️')
 }
 
-export default {
+module.exports = {
     /**
      * Pass Dev Port
      */
